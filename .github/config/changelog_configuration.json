@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "title": "## 🚀 Added",
+      "labels": ["feature", "added"]
+    },
+    {
+      "title": "## 🧪 Changed",
+      "labels": ["change", "changes", "updated"]
+    },
+    {
+      "title": "## Deprecated",
+      "labels": ["deprecated"]
+    },
+    {
+      "title": "## Removed",
+      "labels": ["remove", "removed"]
+    },
+    {
+      "title": "## 🐛 Fixed",
+      "labels": ["fix", "fixed", "fixes"]
+    },
+    {
+      "title": "## 🧪 Tests",
+      "labels": ["test"]
+    },
+    {
+      "title": "## Security",
+      "labels": ["security", "vulnerability"]
+    }
+  ],
+  "ignore_labels": [
+    "ignore",
+    "ci"
+  ],
+  "template": "${{CHANGELOG}}",
+  "empty_template": "- no changes",
+  "transformers": [
+    {
+      "pattern": "[\\-\\*] (\\[(...|TEST|CI|SKIP)\\])( )?(.+?)\n(.+?[\\-\\*] )(.+)",
+      "target": "- $4\n  - $6"
+    }
+  ],
+  "exclude_merge_branches": [],
+  "base_branches": []
+}
